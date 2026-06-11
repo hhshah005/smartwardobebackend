@@ -23,14 +23,12 @@ CATALOG_PATH = os.path.join(BASE_DIR, "catalog")
 # Defaults to localhost:5173 (Vite dev) and localhost:3000 (CRA dev)
 _raw_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:3000")
 ALLOWED_ORIGINS = [o.strip() for o in _raw_origins.split(",") if o.strip()]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,
-    allow_methods=["GET", "POST"],
-    allow_headers=["*"],
+    allow_origins=["*"],  # This allows all origins
+    allow_methods=["*"],  # Allows all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allows all headers
 )
-
 # ─── Gemini ───────────────────────────────────────────────────────────────────
 gemini_client = genai.Client()
 
