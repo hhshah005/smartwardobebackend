@@ -293,7 +293,3 @@ async def process_transformation(
     # 6. Stream back
     return StreamingResponse(io.BytesIO(inline_data.data), media_type=inline_data.mime_type)
 
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
