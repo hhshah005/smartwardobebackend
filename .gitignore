@@ -1,0 +1,18 @@
+# --- Python & Environment ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.env
+
+# --- IDE & OS ---
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# --- Media/Catalog (Optional) ---
+# If these folders are large, uncomment the next line to ignore them:
+# /catalog/
